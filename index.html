@@ -3,70 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pankaj Choudhary | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pankaj Choudhary - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+        
+        main {
+            padding: 2rem 0;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .skill-item {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .experience-item, .project-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .experience-item h3, .project-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+        }
+        
+        .education-item {
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Pankaj Choudhary</h1>
-        <p>Software Developer | Full-Stack | AWS</p>
-        <a href="PankajChoudharyResume.pdf" download>Download Resume</a>
+        <div class="container">
+            <h1>Pankaj Choudhary</h1>
+            <div class="contact-info">
+                <a href="tel:204-698-1536"><i class="fas fa-phone"></i> 204-698-1536</a>
+                <a href="mailto:pankajc2041@gmail.com"><i class="fas fa-envelope"></i> pankajc2041@gmail.com</a>
+                <a href="https://linkedin.com/in/pannkajj" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a Software Development Intern at Amazon and a Computer Science student at the University of Manitoba, passionate about optimizing algorithms and working with cloud technologies like AWS.</p>
-    </section>
+    <main class="container">
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span class="skill-item">Java</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">C/C++</span>
+                <span class="skill-item">SQL</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">HTML/CSS</span>
+                <span class="skill-item">TypeScript</span>
+                <span class="skill-item">Bash</span>
+                <span class="skill-item">PostgreSQL</span>
+                <span class="skill-item">ReactJS</span>
+                <span class="skill-item">Node.js</span>
+                <span class="skill-item">Flask</span>
+                <span class="skill-item">Django</span>
+                <span class="skill-item">LAMP</span>
+                <span class="skill-item">Spark</span>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">Docker</span>
+                <span class="skill-item">AirFlow</span>
+                <span class="skill-item">AWS</span>
+                <span class="skill-item">GCP</span>
+                <span class="skill-item">Azure</span>
+            </div>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> Java, Python, C/C++, SQL, JavaScript, TypeScript</li>
-            <li><strong>Frameworks:</strong> ReactJS, Node.js, Flask, Django, Spark</li>
-            <li><strong>Tools:</strong> Git, Docker, AWS, GCP, VS Code</li>
-        </ul>
-    </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Software Development Engineering Intern</h3>
+                <p><strong>Amazon, Toronto, Canada | 05/2023 – 08/2023</strong></p>
+                <ul>
+                    <li>Conducted a Proof of Concept to host the S3 Console on a serverless architecture, leveraging AWS CDK for infrastructure as code</li>
+                    <li>Improved the console's performance by 40% through optimized code and efficient resource management</li>
+                    <li>Achieved a 30% reduction in operational costs by implementing cost-saving strategies and optimizing resource utilization</li>
+                    <li>Ensured above 96% code coverage through rigorous testing practices including Unit Tests, End to End Tests, and Integration Tests</li>
+                    <li>Utilized Typescript to maintain type safety and reduce runtime errors</li>
+                    <li>Developed features and functionality using ReactJS for a responsive and interactive user interface</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Technical Intern</h3>
+                <p><strong>Proofpoint, Toronto, Canada | 04/2022 – 04/2023</strong></p>
+                <ul>
+                    <li>Developed and deployed full stack web applications using React for frontend and Flask for backend</li>
+                    <li>Leveraged AWS services (EC2, S3, RDS, Lambda) for application hosting, data storage, and serverless functions</li>
+                    <li>Automated manual tasks with optimized Bash scripts, enhancing efficiency and reducing human error</li>
+                    <li>Designed and implemented RESTful APIs to enable communication between frontend and backend systems</li>
+                    <li>Integrated third-party APIs to extend application functionality and improve data handling</li>
+                    <li>Conducted comprehensive testing and debugging to ensure high performance and reliability</li>
+                    <li>Collaborated with cross-functional teams to gather requirements and deliver solutions aligned with business needs</li>
+                    <li>Followed best practices in version control using Git for smooth collaboration and code management</li>
+                    <li>Demonstrated strong problem-solving skills and the ability to work independently on complex projects</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div>
-            <h3>Amazon - Software Development Intern</h3>
-            <p>May 2023 – Aug 2023 | Toronto, Canada</p>
-            <ul>
-                <li>Optimized console performance by 40% using AWS CDK for serverless architecture.</li>
-                <li>Reduced operational costs by 30% with efficient resource management.</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Proofpoint - Technical Intern</h3>
-            <p>April 2022 – April 2023 | Toronto, Canada</p>
-            <ul>
-                <li>Developed full-stack web apps using React and Flask.</li>
-                <li>Automated tasks with Bash scripts, improving efficiency.</li>
-            </ul>
-        </div>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Texter - Text/Multimedia Messaging Application on Android</h3>
+                <p><strong>Technologies:</strong> Java, Android Studio, Google Firebase</p>
+                <ul>
+                    <li>Developed an android application using Android Studio and Firebase as database</li>
+                    <li>Implemented Firebase Auth for authentication and user management</li>
+                    <li>Used SHA256 for encryption</li>
+                    <li>Published the app to Google Play Store</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>MemeShare - Sourcing Memes from Reddit</h3>
+                <p><strong>Technologies:</strong> Java, Android, REST APIs</p>
+                <ul>
+                    <li>Developed an android application using Android Studio and served content using REST APIs</li>
+                    <li>Used API to get content from Reddit</li>
+                    <li>Used Intent actions to share posts to others using Android's inbuilt features</li>
+                    <li>Published the app to Google Play Store</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div>
-            <h3>Texter (Android Messaging App)</h3>
-            <p>Built an Android app using Firebase for real-time messaging and user authentication. Published on the Play Store.</p>
-        </div>
-        <div>
-            <h3>MemeShare</h3>
-            <p>Integrated Reddit API to source memes and share them through Android's native sharing feature.</p>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <p>Bachelor of Science in Computer Science – University of Manitoba (2021 - 2024)</p>
-        <p>Diploma in Computer Science – Lovely Professional University (2018 - 2021)</p>
-    </section>
-
-    <footer>
-        <p>Contact: <a href="mailto:pankajc2041@gmail.com">pankajc2041@gmail.com</a> | <a href="https://linkedin.com/in/pannkajj">LinkedIn</a></p>
-    </footer>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>University of Manitoba</h3>
+                <p><strong>Bachelor of Science in Computer Science | 08/2021 – 10/2024</strong></p>
+                <p>Winnipeg, Canada</p>
+            </div>
+            <div class="education-item">
+                <h3>Lovely Professional University</h3>
+                <p><strong>Diploma in Computer Science and Engineering | 07/2018 – 06/2021</strong></p>
+                <p>Phagwara, India</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
